@@ -10,7 +10,7 @@ import Foundation
 
 protocol CoinManagerDelegate {
     func didFailWithError(_ error: Error)
-    func didGetExchange(_ rate: ExchangeRate)
+    func didGetExchange(_ exchange: ExchangeRate)
 }
 
 struct CoinManager {

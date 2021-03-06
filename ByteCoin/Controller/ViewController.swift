@@ -52,10 +52,10 @@ extension ViewController: CoinManagerDelegate {
         print(error)
     }
     
-    func didGetExchange(_ rate: ExchangeRate) {
+    func didGetExchange(_ exchange: ExchangeRate) {
         DispatchQueue.main.async {
-            self.currencyLabel.text = rate.asset_id_quote
-            self.byteCoinLabel.text = String(format: "%.5f", rate.rate)
+            self.currencyLabel.text = exchange.asset_id_quote
+            self.byteCoinLabel.text = String(format: "%.5f", exchange.rate)
         }
     }
     
